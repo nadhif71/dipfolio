@@ -3,26 +3,21 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-// 1. Define the TypeScript interface for your slide data
 interface Slide {
   id: number;
   src: string;
   alt: string;
 }
 
-// 2. Apply the interface to your array
 const slides: Slide[] = [
-  { id: 1, src: '/src/aiesec1.jpeg', alt: 'Mountain landscape' },
-  { id: 2, src: '/src/aiesec2.jpeg', alt: 'Foggy nature' },
-  { id: 3, src: '/src/oti1.jpeg', alt: 'Forest bridge' },
-  { id: 4, src: '/src/pic1.png', alt: 'City skyline' },
-  { id: 5, src: '/src/pic3.png', alt: 'City skyline' },
-  { id: 6, src: '/src/pic4.png', alt: 'City skyline' },
-
+  { id: 1, src: '/src/aiesec1.webp', alt: 'aiesec1' },
+  { id: 2, src: '/src/aiesec2.webp', alt: 'aiesec2' },
+  { id: 3, src: '/src/oti1.webp', alt: 'oti1' },
+  { id: 4, src: '/src/aiesec4.webp', alt: 'aiesec4' },
 ];
 
+
 export default function AutoSlider() {
-  // TypeScript automatically infers this is a number, but you can be explicit: useState<number>(0)
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

@@ -5,7 +5,6 @@ import AutoSlider from "../../components/AutoSlider";
 export default function About() {
   return (
     <>
-      {/* ── ABOUT ── */}
       <section id="about" className="bg-[#2D232E] py-20 relative z-10 2xl:py-50">
         <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-10 items-center 2xl:scale-150">
           <div className="max-w-xl text-center lg:text-left text-[#E0DDCF] reveal">

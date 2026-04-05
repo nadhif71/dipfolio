@@ -16,7 +16,6 @@ export default function Home() {
         <Nav />
         <Hero />
 
-        {/* Hero → About (fills into #2D232E) */}
         <div className="wave-divider -mb-1 relative z-10">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full">
             <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#2D232E" />
@@ -25,7 +24,6 @@ export default function Home() {
 
         <About />
 
-        {/* About → Experience (fills into #F1F0EA) */}
         <div className="wave-divider bg-[#2D232E] -mb-1 z-10">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full">
             <path d="M0,30 C360,0 1080,60 1440,30 L1440,60 L0,60 Z" fill="#F1F0EA" />
@@ -34,7 +32,6 @@ export default function Home() {
 
         <Experience />
 
-        {/* Experience → Footer (fills into #474448) */}
         <div className="wave-divider bg-[#F1F0EA] -mb-1 relative z-10">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full">
             <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#474448" />
