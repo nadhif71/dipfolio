@@ -22,7 +22,6 @@ export default function Experience() {
     <section id="experience" className="py-20 2xl:py-40 relative bg-[#F1F0EA] z-10">
       <div className="max-w-6xl 2xl:max-w-[1800px] mx-auto px-6 2xl:px-24 flex flex-col gap-10 2xl:gap-16">
 
-        {/* Experience — circular cards */}
         <div className="reveal">
           <p className="section-tag text-[#2D232E] mb-2 2xl:text-lg">02 — Work</p>
           <h2 className="text-2xl md:text-3xl 2xl:text-7xl font-bold text-[#2D232E]">Experience</h2>
@@ -48,7 +47,6 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Projects — original card design */}
         <div className="reveal mt-4">
           <p className="section-tag text-[#2D232E] mb-2 2xl:text-lg">03 — Work</p>
           <h2 className="text-2xl md:text-3xl 2xl:text-7xl font-bold text-[#2D232E]">Projects</h2>
