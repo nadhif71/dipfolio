@@ -19,38 +19,34 @@ export default function Hero() {
   }, []);
 
   return (
-    <>
-        <div className="flex fixed flex-row top-[30%] opacity-10 lg:opacity-50 xl:opacity-100 items-center left-1/2 justify-center w-full h-fit overflow-x-hidden inset-x-0 md:top-[30%] lg:top-[10%] xl:top-[8%] 2xl:top-[10%] 2xl:h-max"  style={{ bottom: "80px", transform: `translateX(-50%) translateY(${imgTranslate}px)` }}>
-          <Image src="/src/pic4.webp" alt="Profile Picture" width={400} height={400} className="-z-10 scale-140 md:scale-150 sm:scale-125 2xl:scale-170" />
-        </div>
+    <section
+      ref={heroRef}
+      id="introduction"
+      className="w-full relative overflow-hidden px-4 md:px-12 lg:px-20 py-12 md:py-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-2 md:gap-4 lg:gap-20 bg-transparent max-w-7xl mx-auto md:min-h-[75vh] lg:min-h-[85vh]"
+    >
+      <div className="text-center lg:text-left relative w-full pt-6 md:pt-6 lg:pt-32">
+        <p className="section-tag text-[#2D232E] mb-4 text-[10px] md:text-xs hero-line-1 uppercase tracking-[0.4em] opacity-40">Portfolio — 2025</p>
+        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-8xl xl:text-9xl font-bold text-[#2D232E] leading-[0.85] hero-line-1 tracking-tighter break-words">
+          Falah
+        </h1>
+        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-8xl xl:text-9xl font-bold text-[#2D232E] leading-[0.85] hero-line-2 tracking-tighter break-words">
+          Aqlyala<span className="text-[#6d626c]">nadhif</span>
+        </h1>
+      </div>
 
-      <section
-        ref={heroRef}
-        id="introduction"
-        className="w-full relative overflow-hidden px-6 2xl:px-50 lg:px-20 py-35 flex flex-col lg:flex-row items-center justify-between bg-transparent"
-      >
-        <div className="text-center lg:text-left md:text-2xl">
-          <p className="section-tag text-[#2D232E] mb-3 2xl:text-9xl xl:text-7xl lg:text-6xl hero-line-1">Portfolio — 2025</p>
-          <h1 className="text-4xl md:text-5xl 2xl:text-9xl lg:text-7xl xl:text-6xl font-bold text-[#2D232E] leading-tight hero-line-1">
-            Falah
-          </h1>
-          <h1 className="text-4xl md:text-4xl 2xl:text-8xl lg:text-6xl xl:text-5xl font-bold text-[#2D232E] leading-tight hero-line-2">
-            Aqlyala<span className="text-[#6d626c]">nadhif</span>
-          </h1>
-        </div>
-
-        <div className="max-w-sm text-center md:ml-55 lg:text-left">
-          <h2 className="text-2xl md:text-3xl 2xl:text-6xl lg:text-4xl xl:text-3xl font-bold text-[#2D232E] hero-intro-title">Introduction</h2>
-          <p className="mt-4 text-[#2D232E] text-sm 2xl:text-4xl lg:text-lg hero-intro-body">
+      <div className="max-w-full sm:max-w-md lg:max-w-sm xl:max-w-md text-center lg:text-left z-10 relative mt-2 md:mt-6 lg:mt-12 xl:mt-16">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2D232E] hero-intro-title">Introduction</h2>
+          <p className="mt-4 md:mt-6 text-sm md:text-base lg:text-lg xl:text-xl text-[#2D232E] hero-intro-body leading-relaxed opacity-70">
             I design and build modern web experiences with a focus on clarity,
             efficiency, and impact.
           </p>
-          <a href="#about" className="mt-6 inline-flex 2xl:text-2xl items-center gap-2 text-[#534B52] hover:opacity-70 transition hero-cta group">
+          <a href="#about" className="mt-8 md:mt-10 inline-flex items-center gap-3 text-[#2D232E] font-bold hover:opacity-50 transition-all hero-cta group border-b-2 border-[#2D232E]/10 pb-2">
             My Story
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-move-right-icon lucide-move-right inline-block transition-transform group-hover:translate-x-1"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-move-right-icon lucide-move-right transition-transform group-hover:translate-x-2"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
           </a>
         </div>
+
+      
       </section>
-    </>
   );
 }

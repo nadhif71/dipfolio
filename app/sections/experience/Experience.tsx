@@ -16,51 +16,51 @@ export default function Experience() {
     { title: "Coming Soon",           desc: "—",                                                      img: "/src/questionmark.webp" },
   ];
 
-  const delays = ["delay-1", "delay-2", "delay-3"];
+  const delays = ["delay-1", "delay-2", "delay-3", "delay-4"];
 
   return (
-    <section id="experience" className="py-20 2xl:py-40 relative bg-[#F1F0EA] z-10">
-      <div className="max-w-6xl 2xl:max-w-[1800px] mx-auto px-6 2xl:px-24 flex flex-col gap-10 2xl:gap-16">
+    <section id="experience" className="py-24 md:py-32 lg:py-40 relative bg-[#F1F0EA] z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-16 lg:gap-24">
 
-        <div className="reveal">
-          <p className="section-tag text-[#2D232E] mb-2 2xl:text-lg">02 — Work</p>
-          <h2 className="text-2xl md:text-3xl 2xl:text-7xl font-bold text-[#2D232E]">Experience</h2>
+        <div className="reveal text-center lg:text-left">
+          <p className="section-tag text-[#2D232E] mb-3 uppercase tracking-widest text-xs opacity-60">02 — Work</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D232E]">Experience</h2>
         </div>
 
-        <div className="flex flex-wrap justify-start gap-10 2xl:gap-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {experiences.map((item, i) => (
             <div key={i} className={`reveal ${delays[i]} flex flex-col items-center gap-4 group`}>
-              <div className="relative card-hover w-36 h-36 md:w-44 md:h-44 2xl:w-64 2xl:h-64 rounded-full bg-[#E0DDCF] shadow-md overflow-hidden border-4 border-[#2D232E]/10 group-hover:border-[#2D232E]/30 transition-all duration-300">
+              <div className="relative card-hover w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-[#E0DDCF] shadow-lg overflow-hidden border-4 border-white/50 group-hover:border-[#2D232E]/20 transition-all duration-500">
                 {item.logo ? (
                   <Image src={item.logo} alt={item.title} fill className="object-cover" />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-4xl 2xl:text-6xl font-bold text-[#2D232E] opacity-20">?</span>
+                    <span className="text-3xl md:text-5xl font-bold text-[#2D232E] opacity-10">?</span>
                   </div>
                 )}
               </div>
-              <div className="text-center">
-                <p className="font-bold text-[#2D232E] 2xl:text-3xl">{item.title}</p>
-                <p className="text-sm text-[#2D232E] opacity-60 mt-1 2xl:text-2xl">{item.desc}</p>
+              <div className="text-center px-2">
+                <p className="font-bold text-[#2D232E] text-base md:text-lg lg:text-xl line-clamp-1">{item.title}</p>
+                <p className="text-xs md:text-sm text-[#2D232E] opacity-60 mt-1">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="reveal mt-4">
-          <p className="section-tag text-[#2D232E] mb-2 2xl:text-lg">03 — Work</p>
-          <h2 className="text-2xl md:text-3xl 2xl:text-7xl font-bold text-[#2D232E]">Projects</h2>
+        <div className="reveal mt-8 text-center lg:text-left">
+          <p className="section-tag text-[#2D232E] mb-3 uppercase tracking-widest text-xs opacity-60">03 — Work</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D232E]">Projects</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((item, i) => (
-            <div key={i} className={`card-hover bg-[#E0DDCF] rounded-xl overflow-hidden shadow-sm reveal ${delays[i]}`}>
-              <div className="overflow-hidden">
-                <Image src={item.img} alt={item.title} width={500} height={300} className="w-full object-cover aspect-video" />
+            <div key={i} className={`card-hover bg-[#E0DDCF]/50 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl reveal ${delays[i % 4]} group border border-black/5`}>
+              <div className="overflow-hidden relative aspect-video">
+                <Image src={item.img} alt={item.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
-              <div className="p-4 2xl:p-10">
-                <h3 className="font-bold text-[#2D232E] 2xl:text-3xl">{item.title}</h3>
-                <p className="text-sm text-[#2D232E] opacity-70 mt-1 2xl:text-2xl">{item.desc}</p>
+              <div className="p-6 md:p-8">
+                <h3 className="font-bold text-[#2D232E] text-xl md:text-2xl">{item.title}</h3>
+                <p className="text-sm md:text-base text-[#2D232E] opacity-70 mt-2 leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}

@@ -31,7 +31,7 @@ export default function AutoSlider() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-4xl h-[400px] mx-auto rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
+    <div className="relative w-full max-w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] mx-auto rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
       
       {slides.map((slide, index) => (
         <div
